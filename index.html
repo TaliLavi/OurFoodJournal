@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width"/>
+  <title>Our Food Journal</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/external/materialize-0.97.5.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/external/jquery-2.2.2.js"></script>
+  <script src="js/external/firebase-2.4.1.js"></script>
+  <script src="js/external/materialize-0.97.5.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body class="flow-text">
+  <!-- <button class="waves-effect waves-light btn" onclick="showEverything()">
+    Fetch everything
+  </button>
+  <pre id="allContent"></pre> -->
+
+  <div id="meal-page" class="container">
+    <div id="meal-page-header" class="row">
+      <nav>
+        <div class="nav-wrapper">
+          <ul class="left">
+            <li><a href="#"><i class="material-icons">arrow_back</i></a></li>
+          </ul>
+          <a href="#" class="brand-logo center">New Meal</a>
+          <ul class="right">
+            <li><a href="#"><i class="material-icons">delete</i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div id="meal-page-content">
+
+    <div class="row">
+      <div class="input-field col s8">
+        <select id="meal-type" class="">
+          <option value="-1" disabled selected>Meal type?</option>
+          <option value="0">Breakfast</option>
+          <option value="1">Mid-morning</option>
+          <option value="2">Lunch</option>
+          <option value="3">Afternoon</option>
+          <option value="4">Dinner</option>
+          <option value="5">Night</option>
+          <option value="6">Extra</option>
+        </select>
+      </div>
+
+      <div id="meal-datetime" class="col s2 offset-s2">
+        <h5 id="meal-time" class="row"></h5>
+        <h6 id="meal-date" class="row"></h6>
+      </div>
+
+      <div class="input-field col s8">
+        <select id="hunger-level">
+          <option value="-1" disabled selected>Hunger level?</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- <table class="col s12 bordered">
+        <thead>
+          <tr>
+              <th data-field="id">What did I eat</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              <span class="col s11">
+                Eclair blah blah blah blah
+              </span>
+              <button class="col s1 waves-effect waves-light btn">
+                DELETE
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="col s11">
+                Eclair blah blah blah blah
+              </span>
+              <button class="col s1 waves-effect waves-light btn">
+                DELETE
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="col s11">
+                Eclair blah blah blah blah
+              </span>
+              <button class="col s1 waves-effect waves-light btn">
+                DELETE
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table> -->
+
+      <ul class="collection with-header">
+        <li class="collection-header"><h4>What did I eat</h4></li>
+        <li class="collection-item dismissable">
+          <div>
+            Lollipop
+            <a class="secondary-content waves-effect waves-light"><i class="material-icons">delete</i></a>
+          </div>
+        </li>
+        <li class="collection-item dismissable">
+          <div>
+            Lollipop
+            <a class="secondary-content waves-effect waves-light"><i class="material-icons">delete</i></a>
+          </div>
+        </li>
+        <li class="collection-item dismissable">
+          <div>
+            Lollipop
+            <a class="secondary-content waves-effect waves-light"><i class="material-icons">delete</i></a>
+          </div>
+        </li>
+        <li class="collection-item dismissable">
+          <div>
+            Lollipop
+            <a class="secondary-content waves-effect waves-light"><i class="material-icons">delete</i></a>
+          </div>
+        </li>
+        <li class="collection-item teal lighten-2">
+          <div>
+            <a class="white-text waves-effect waves-light"><i class="left material-icons">add</i>Add an item</a>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+</body>
+</html>
